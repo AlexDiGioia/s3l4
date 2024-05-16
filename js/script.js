@@ -1,6 +1,12 @@
-const totCells =72
+const totCells = 72;
 
-//const shuffled = [];
+const RGBcolor = function () {
+  let R = Math.floor(Math.random() * 256);
+  let G = Math.floor(Math.random() * 256);
+  let B = Math.floor(Math.random() * 256);
+  let randomcolor = "rgb(" + R + "," + G + "," + B + ")";
+  return randomcolor;
+};
 
 const createCells = (totCells) => {
   const bingo = document.getElementById("bingo");
@@ -18,25 +24,30 @@ const createCells = (totCells) => {
   }
 };
 
-//createCells(72)
-
-btnClickShuffle= event=>{
-  //event.preventDefault()
-  const bingo = document.getElementById("bingo");
-  const shuffled=bingo.children;
-  const index=Math.floor(Math.random() * 72)+1;
-  shuffled[index].style.backgroundColor=	"red";
-}
 const shuffleBtn = document.getElementById("shuffle");
 
+btnClickShuffle = (event) => {
+  event.preventDefault();
+  const bingo = document.getElementById("bingo");
+  const shuffled = bingo.children;
+  const index = Math.floor(Math.random() * 72) + 1;
 
+  /*const alreadyShuffled=[0];
+  shuffled.forEach(element => {
+    for(let i=0;i<alreadyShuffled;i++){
+      alreadyShuffled.forEach(element2 => {
+        if(index===element2)
+          alert("Numero già uscito!");
+      });
+    }
+  });*/
+  shuffled[index].style.backgroundColor = RGBcolor();
+  console.log("saas", randomInteger(255));
+  //alreadyShuffled.push(index);
+};
 
 shuffleBtn.addEventListener("click", btnClickShuffle);
-console.log("saaaaaaaaaaas")
 
-
-window.addEventListener("DOMContentLoaded",()=>{
+window.addEventListener("DOMContentLoaded", () => {
   createCells(totCells);
-
-})
-
+});
