@@ -21,14 +21,15 @@ const createCells = (totCells) => {
 //createCells(72)
 
 btnClickShuffle= event=>{
-  event.preventDefault()
+  //event.preventDefault()
   const bingo = document.getElementById("bingo");
   const shuffled=bingo.children;
   const index=Math.floor(Math.random() * 72)+1;
   shuffled[index].style.backgroundColor=	"red";
 }
-
 const shuffleBtn = document.getElementById("shuffle");
+
+
 
 shuffleBtn.addEventListener("click", btnClickShuffle);
 console.log("saaaaaaaaaaas")

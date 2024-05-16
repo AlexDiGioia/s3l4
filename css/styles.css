@@ -26,20 +26,12 @@ h2 {
   margin-bottom: 1rem;
 }
 
-form {
-  display: inline;
-}
-
-.color-epic {
-  color: #ba51d7;
-}
-
 .container {
   max-width: 768px;
   margin-inline: auto;
 }
 
-#calendar {
+#bingo {
   background-color: #0c0b1d;
   color: #ebebeb;
   border-radius: 8px;
