@@ -129,17 +129,14 @@ input:focus::placeholder {
   padding: 0px 6px;
 }
 
-#newMeetingTime::-webkit-calendar-picker-indicator {
-  background-color: #7a408a;
-  border-radius: 50%;
-  cursor: pointer;
-}
+
 
 #newMeetingName {
   width: 205px;
 }
 
-form button {
+button {
+  display: inline-block;
   cursor: pointer;
   background-color: #7a408a;
   color: #efd7f5;
@@ -153,14 +150,3 @@ form button {
   display: none;
 }
 
-#appointmentsList {
-  padding-inline-start: 16px;
-}
-
-#appointmentsList li {
-  min-height: 30px;
-}
-
-#appointmentsList li::marker {
-  color: #7a408a;
-}
